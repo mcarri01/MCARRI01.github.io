@@ -1,5 +1,5 @@
 class Parser {
-  public HashMap<Integer,Ball> balls = new HashMap<Integer, Ball>();;
+  public HashMap<int,Ball> balls = new HashMap<int, Ball>();;
   public ArrayList<Spring> springs = new ArrayList();;
 
   Parser(String filename) {
