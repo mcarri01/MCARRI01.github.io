@@ -1,4 +1,4 @@
-module.exports = function(options, undef) {
+function(options, undef) {
   var PConstants = options.PConstants;
 
   function PVector(x, y, z) {
