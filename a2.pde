@@ -5,6 +5,7 @@ double kineticEnergy = 1;
 
 void setup() {
   size(1500, 600);
+  surface.setResizable(true);
   fdl = new ForceDirectedLayout();
 }
 

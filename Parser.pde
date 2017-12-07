@@ -18,8 +18,8 @@ class Parser {
     } 
     for (int j = i; j < lines.length; j++) {
       spline = split(lines[j],",");
-      int id1 = Integer.parseInt(spline[0]);
-      int id2 = Integer.parseInt(spline[1]);
+      int id1 = parseInt(spline[0], 10);
+      int id2 = parseInt(spline[1], 10);
       float len = Float.parseFloat(spline[2]);
       if (i % 2 == 0) {
         springs.add(new Spring(balls.get(id1),balls.get(id2), len, true));  
