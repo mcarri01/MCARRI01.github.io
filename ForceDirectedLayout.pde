@@ -34,7 +34,7 @@ class ForceDirectedLayout {
       totalForce.add(applyHookes(b));
       totalForce.add(applyCoulombs(b));
       b.force = totalForce;
-      energy += 0.5*b.mass*totalForce.copy().dot(totalForce);
+      energy += 0.5*b.mass*totalForce.get().dot(totalForce);
     }
     return energy;
   }
@@ -46,7 +46,7 @@ class ForceDirectedLayout {
           float q1 = b1.mass * 1;
           float q2 = b2.mass * 1;
           float dist = (float)Math.pow(b1.p.dist(b2.p), 2);
-          u = b1.p.copy().sub(b2.p);
+          u = b1.p.get().sub(b2.p);
           u.normalize();
           u.mult((Math.abs(q1 * q2)) / dist);
           force.add(u);

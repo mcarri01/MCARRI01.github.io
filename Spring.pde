@@ -15,31 +15,31 @@ class Spring {
    this.b2 = b2;
    this.len = l;
    // gets approx the distance as a vector
-   oldDisp = b1.p.copy().sub(b2.p.copy());
+   oldDisp = b1.p.get().sub(b2.p.get());
  }
  
  void render() {
    PVector p1, p2;
-   p1 = b1.p.copy();
-   p2 = b2.p.copy(); 
+   p1 = b1.p.get();
+   p2 = b2.p.get(); 
    
-   dist = p1.copy().sub(p2).normalize();
+   dist = p1.get().sub(p2).normalize();
    
    //dist.set(cos(degrees(35)) * len, sin(degrees(35)) * len);
-   PVector distPoints = p1.copy().sub(p2);
+   PVector distPoints = p1.get().sub(p2);
    if (Math.abs(distPoints.mag()) > dist.mag() ) {
-     force1 = distPoints.copy().sub(dist).mult(k);
-     force2 = dist.copy().sub(distPoints).mult(k);
-     //force2 = distPoints.copy().sub(dist).mult(-k);
+     force1 = distPoints.get().sub(dist).mult(k);
+     force2 = dist.get().sub(distPoints).mult(k);
+     //force2 = distPoints.get().sub(dist).mult(-k);
    }
     line(b1.p.x, b1.p.y, b2.p.x, b2.p.y);
     oldTime = millis();
  }
  PVector getForce(Ball b) {
    if (b == b1) {
-    return force1.copy(); 
+    return force1.get(); 
    } else {
-    return force2.copy(); 
+    return force2.get(); 
    }
  }
 }
