@@ -19,7 +19,7 @@ class ForceDirectedLayout {
   }
 
   public PVector applyHookes(Ball b) {
-    PVector force = new PVector(0, 0);
+    PVector force = new PVector(0, 0, 0);
     for (Spring spring : b.springs) {
           PVector f = spring.getForce(b);
           force.add(f);
@@ -30,7 +30,7 @@ class ForceDirectedLayout {
   public double applyForces() {
     double energy = 0;
     for (Ball b : balls) {
-      PVector totalForce = new PVector(0, 0);
+      PVector totalForce = new PVector(0, 0, 0);
       totalForce.add(applyHookes(b));
       totalForce.add(applyCoulombs(b));
       b.force = totalForce;
@@ -39,7 +39,7 @@ class ForceDirectedLayout {
     return energy;
   }
   public PVector applyCoulombs(Ball b1) {
-    PVector force = new PVector(0, 0);
+    PVector force = new PVector(0, 0, 0);
     for (Ball b2: balls) {
       if (b1.id != b2.id) {
           PVector u;

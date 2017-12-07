@@ -4,11 +4,11 @@ class Ball {
   public int id;
   public float mass = 1;
   public int deltaTime;
-  //public PVector velocity = new PVector(-1, 1);
+  //public PVector velocity = new PVector(-1, 1, 0);
   public ArrayList<Spring> springs = new ArrayList<Spring>();
-  public PVector velocity = new PVector(0, 0);
-  public PVector acceleration = new PVector(0, 0);
-  public PVector force = new PVector(0, 0);
+  public PVector velocity = new PVector(0, 0, 0);
+  public PVector acceleration = new PVector(0, 0, 0);
+  public PVector force = new PVector(0, 0, 0);
   //public float kineticEnergy = 0;
   private PVector old_mouse = null;
 

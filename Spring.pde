@@ -2,11 +2,11 @@ class Spring {
  public Ball b1, b2;
  private PVector oldDisp, dispacement;
  private PVector oldb1, oldb2;
- public PVector force1 = new PVector(0, 0);
- public PVector force2 = new PVector(0, 0);
+ public PVector force1 = new PVector(0, 0, 0);
+ public PVector force2 = new PVector(0, 0, 0);
  public float k = -0.0005;
  public float len = 0;
- public PVector dist = new PVector(0, 0);
+ public PVector dist = new PVector(0, 0, 0);
 
  private int oldTime = 0;
 
