@@ -13,7 +13,7 @@ class Parser {
       float radius = (float)(mass * MASS_SCALE);
       float x = random(0 + radius, width - radius);
       float y = random(0 + radius, height - radius);
-      balls.put(id, new Ball(new PVector(x,y), mass, id));
+      balls.put(id, new Ball(new PVector(x,y, 0), mass, id));
       spline = split(lines[i++],",");
     } 
     for (int j = i; j < lines.length; j++) {

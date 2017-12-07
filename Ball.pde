@@ -12,7 +12,7 @@ class Ball {
   //public float kineticEnergy = 0;
   private PVector old_mouse = null;
 
-  PVector p = new PVector();
+  PVector p = new PVector(0, 0, 0);
   color c = #ac5bcc;
 
   Ball(PVector p, int mass, int id) {
