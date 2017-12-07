@@ -15,7 +15,7 @@ class Parser {
       float y = random(0 + radius, height - radius);
       balls.put(id, new Ball(new PVector(x,y), mass, id));
       spline = split(lines[i++],",");
-    } w
+    } 
     for (int j = i; j < lines.length; j++) {
       spline = split(lines[j],",");
       int id1 = parseInt(spline[0], 10);
